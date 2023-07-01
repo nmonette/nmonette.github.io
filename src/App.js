@@ -89,7 +89,7 @@ function App() {
 ], {shimErrors: true}) 
 
    return (
-        <RouterProvider router={router} basename={"/portfolio"} />
+        <RouterProvider router={router}  /> // basename={"/portfolio"}
    )
 }
 
