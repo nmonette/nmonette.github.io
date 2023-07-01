@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.e6c13ad2.css",
-    "main.js": "/portfolio/static/js/main.6d882a70.js",
-    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
-    "static/media/IMG_6722.JPG": "/portfolio/static/media/IMG_6722.6f71d3e480a4e940049d.JPG",
-    "static/media/FIFADraft.png": "/portfolio/static/media/FIFADraft.7d2860c5eb900d5e95aa.png",
-    "static/media/peter.jpeg": "/portfolio/static/media/peter.71605379982844f3ad92.jpeg",
-    "static/media/FootballSim.png": "/portfolio/static/media/FootballSim.33dbd20b2e07190a1406.png",
-    "static/media/resume.pdf": "/portfolio/static/media/resume.652ff7544917aef87910.pdf",
-    "static/media/tflogo.jpeg": "/portfolio/static/media/tflogo.2137806c1efd3a48bc5e.jpeg",
-    "index.html": "/portfolio/index.html",
-    "main.e6c13ad2.css.map": "/portfolio/static/css/main.e6c13ad2.css.map",
-    "main.6d882a70.js.map": "/portfolio/static/js/main.6d882a70.js.map",
-    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.bf266412.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/IMG_6722.JPG": "/static/media/IMG_6722.6f71d3e480a4e940049d.JPG",
+    "static/media/FIFADraft.png": "/static/media/FIFADraft.7d2860c5eb900d5e95aa.png",
+    "static/media/peter.jpeg": "/static/media/peter.71605379982844f3ad92.jpeg",
+    "static/media/FootballSim.png": "/static/media/FootballSim.33dbd20b2e07190a1406.png",
+    "static/media/resume.pdf": "/static/media/resume.652ff7544917aef87910.pdf",
+    "static/media/tflogo.jpeg": "/static/media/tflogo.2137806c1efd3a48bc5e.jpeg",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.bf266412.js.map": "/static/js/main.bf266412.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.6d882a70.js"
+    "static/js/main.bf266412.js"
   ]
 }

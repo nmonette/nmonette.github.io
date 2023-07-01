@@ -16,8 +16,8 @@ function About() {
   return(
     <>
     <HomeBar />
-    <Grid container  justifyContent="center" alignContent="center" columns={12} sx={{my:2, flexGrow: 1, overflowX:"hidden", overflowY: "hidden"}}>
-      <Grid item  xs={12} >
+    <Grid container  justifyContent="center" alignContent="center" columns={12} sx={{my:2, overflowX:"hidden", overflowY: "hidden"}}>
+      <Grid item  xs={12} md={12} lg={12}>
         <Grid container columns={12} justifyContent="center" spacing={4} sx={{my:2}}>
           <Grid item xs={4}>
             <Typography sx={{fontFamily:"Helvetica"}} variant="h4" component="h4">Nathan Monette</Typography>
@@ -34,7 +34,7 @@ function About() {
               In my free time I play water polo, lift weights, and play the bass, alto saxophone, and ukelele. 
             </Typography>
           </Grid>
-          <Grid item xs={4}><img src={face} alt="facePic" style={{width:400, height:400}} /></Grid>
+          <Grid item ><img src={face} alt="facePic" style={{width:400, height:400}} /></Grid>
         </Grid>
       </Grid>
     </Grid>
