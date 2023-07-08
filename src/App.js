@@ -46,7 +46,7 @@ function Projects() {
   return (
     <>
       <HomeBar/>
-      <Typography variant="h3" component="center" sx={{mt:10, fontFamily:"Helvetica"}}>Projects</Typography>
+      <Typography variant="h3" component="center" sx={{mt:10, fontFamily:"Helvetica", mb: 2}}>Projects</Typography>
       <Grid container justifyContent="center" alignItems="center" columns={12} sx={{mb:40, mt:"10%"}} style={{ minHeight: '100vh', transform: 'scale(1.2)'}}>
         <ProjectCard title="ZotScheduler" imageSrc={peter} tags={["Web Scraping", "Machine Learning", "Python", "JavaScript"]} >
           ZotScheduler uses tree-ensemble regression models 
