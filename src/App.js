@@ -60,11 +60,6 @@ function Projects() {
           <br/><br/>
           The GitHub repository's link is {<a href="https://github.com/nmonette/FIFARank" >here</a>}.
         </ProjectCard>
-        <ProjectCard title="FootballSim" imageSrc={fsim} tags={["Unity", 'C#']}>
-          FootballSim is a simple European Football simulator that I made for a future project exploring the reward tradeoffs surrounding the offside trap in Football.
-          <br/><br/>
-          Download it {<a href="https://drive.google.com/drive/folders/17hfz6O7l6XMdUyuRH8UXeDWKBeREgf-r?usp=sharing" >here</a>}.
-        </ProjectCard>
         <ProjectCard title="FIFADraft" imageSrc={fd} tags={["React", "JavaScript", "Firebase"]}>
           FIFADraft is a fantasy soccer draft app that I made for FIFA tournaments that assists with the creation of custom teams not already 
           preset by the game. I incorporated database structuring that allows users in the same lobby to draft synchronously.
