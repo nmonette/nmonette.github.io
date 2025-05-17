@@ -97,6 +97,7 @@ function Projects() {
           {<Link underline="hover" rel="noreferrer" target="_blank" href="https://github.com/nmonette/IPG-JAX-V2" >GitHub</Link>}.
         </ProjectCard>
         <ProjectCard title="ZotScheduler" imageSrc={peter} tags={["Web Scraping", "Machine Learning", "Python", "JavaScript"]} >
+          <Typography variant="h7" component="left" sx={{mt:10, fontFamily:"Helvetica"}}>P. Cutter, <b>N. Monette</b>, R. Zhang</Typography><br/>
           <Typography variant="h10" component="left" sx={{mt:10, fontFamily:"Helvetica", fontStyle:"italic"}}>HackUCI 2023</Typography>
           <br/><br/>
           ZotScheduler uses tree-ensemble regression models 
