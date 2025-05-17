@@ -9,8 +9,8 @@ import XIcon from '@mui/icons-material/X';
 
 import face from "./IMG_6722.jpeg"
 import peter from "./peter.jpeg"
-import fd from "./FIFADraft.png"
 import multigrid from "./Multigrid.png"
+import ncc from "./ncc.svg"
 
 import { createHashRouter, RouterProvider } from "react-router-dom";
 
@@ -25,7 +25,7 @@ function About() {
             <Typography sx={{fontFamily:"Helvetica"}} variant="h4" component="h4">Nathan Monette</Typography>
             <Typography sx={{fontFamily:"Helvetica"}} variant="body" component="em">[firstname] [lastname]1 at gmail dot com</Typography>
             <Typography sx={{fontFamily:"Helvetica", fontSize:18, mt:2}} variant="body" component="div">
-              I'm currently a fourth-year undergraduate student at the University of California Irvine, pursuing a B.S. in computer science with a minor in mathematics. 
+              I'm currently a fourth-year undergraduate student at the University of California Irvine, pursuing a B.S. in computer science. 
               I specialize in intelligent systems, which is UCI's AI/ML emphasis.
             </Typography>
             <Typography sx={{fontFamily:"Helvetica", mt:"10pt"}} variant="h5" component="div"><b>Research</b></Typography>
@@ -40,6 +40,9 @@ function About() {
             <Typography sx={{fontFamily:"Helvetica", fontSize:18, mt:1}} variant="body" component="div">
               <Typography sx={{color:"red"}} variant="body">As of 10/2024</Typography> I have begun working in the <Link rel="noreferrer" target="_blank" href="https://indylab.org/" underline="hover">indylab</Link> to work on leveraging 
               <b> offline</b> data to accelerate the learning of <b>large-scale</b> multi-agent systems under the supervision of prof. <Link rel="noreferrer" target="_blank" href="https://royf.org/" underline="hover">Roy Fox</Link> and <Link rel="noreferrer" target="_blank" href="https://jblanier.net/" underline="hover">JB Lanier</Link>.
+            </Typography>
+            <Typography sx={{fontFamily:"Helvetica", fontSize:18, mt:1}} variant="body" component="div">
+              <Typography sx={{color:"blue"}} variant="body">News (5/2025)</Typography> My first <Link underline="hover" rel="noreferrer" target="_blank" href="https://openreview.net/forum?id=WnknYUybWX" >paper</Link> (on unsupervised environment design) was accepted to the Reinforcement Learning Conference 2025! 
             </Typography>
             <center>
                 <IconButton size="large" href="https://github.com/nmonette" rel="noreferrer" target="_blank">
@@ -69,25 +72,39 @@ function Projects() {
       <HomeBar/>
       <Typography variant="h3" component="center" sx={{mt:10, fontFamily:"Helvetica"}}>Projects</Typography>
       <Grid container justifyContent="center" alignItems="center" columns={12} sx={{mb:40, mt:"10%"}} style={{ minHeight: '100vh', transform: 'scale(1.2)'}}>
+        <ProjectCard title="An Optimisation Framework for Unsupervised Environment Design" imageSrc={ncc} tags={["Environment Design", "Reinforcement Learning", "Optimization"]} >
+        <Typography variant="h7" component="left" sx={{mt:10, fontFamily:"Helvetica"}}><b>N. Monette</b>, A. Letcher, M. Beukman, M. Jackson, A. Rutherford, A. Goldie, J. Foerster</Typography><br/>
+        <Typography variant="h7" component="left" sx={{mt:10, fontFamily:"Helvetica", fontStyle:"italic"}}>Reinforcement Learning Conference 2025</Typography>
+        <br/><br/>
+          This work studies the optimization perspective of unsupervised environment design. Essentially, we learn a distribution over reinforcement learning tasks in order to 
+          pursue a curriculum for the agent. We optimize such a distribution with gradients, and thus obtain convergence guarantees even when using neural networks for the
+          agent. 
+          <br/><br/>
+          I was largely responsible for the code implementation of this paper, as well as the general ideas and writing. I also helped with the theory.
+          <br/><br/>
+          {<Link underline="hover" rel="noreferrer" target="_blank" href="https://nmonette.github.io/optimising-ued/" >Project Site.</Link>}<br/>
+          {<Link underline="hover" rel="noreferrer" target="_blank" href="https://openreview.net/forum?id=WnknYUybWX" >Paper.</Link>}<br/>
+          {<Link underline="hover" rel="noreferrer" target="_blank" href="https://github.com/nmonette/NCC-UED" >GitHub.</Link>}
+        </ProjectCard>
+        <ProjectCard title="Learning Equilibria in Adversarial Team Markov Games (JAX Implementation)" imageSrc={multigrid} tags={["Game Theory", "Reinforcement Learning", 'Python', "JAX"]}>
+        <Typography variant="h7" component="left" sx={{mt:10, fontFamily:"Helvetica"}}><b>N. Monette</b> (Paper by F. Kalogiannis, J. Yan, I. Panageas)</Typography><br/>
+        <Typography variant="h10" component="left" sx={{mt:10, fontFamily:"Helvetica", fontStyle:"italic"}}>NeurIPS 2024</Typography>
+          <br/><br/>
+          This was a paper recently put out by some people in my lab at UCI. It is the first paper that learns Nash Equilibria 
+          in adversarial team Markov games. I implemented this paper's algorithm in JAX, which resulted in an efficient implementation.
+          <br/><br/>
+          {<Link underline="hover" rel="noreferrer" target="_blank" href="https://proceedings.neurips.cc/paper_files/paper/2024/file/a8bc668b1559d705221b0e7510c45e48-Paper-Conference.pdf" >Paper</Link>}.<br/>
+          {<Link underline="hover" rel="noreferrer" target="_blank" href="https://github.com/nmonette/IPG-JAX-V2" >GitHub</Link>}.
+        </ProjectCard>
         <ProjectCard title="ZotScheduler" imageSrc={peter} tags={["Web Scraping", "Machine Learning", "Python", "JavaScript"]} >
+          <Typography variant="h10" component="left" sx={{mt:10, fontFamily:"Helvetica", fontStyle:"italic"}}>HackUCI 2023</Typography>
+          <br/><br/>
           ZotScheduler uses tree-ensemble regression models 
           and search algorithms to find the optimal schedule for a UCI student given a set of potential classes for the upcoming quarter.
           <br/><br/>
           I led the AI part of our project, culminating in a "Best AI Hack" award, as well as overall runner-up out of 60+ teams at HackUCI.
           <br/><br/>
-          The devpost link is {<Link underline="hover" rel="noreferrer" target="_blank" href="https://devpost.com/software/zotscheduler" >here</Link>}.
-        </ProjectCard>
-        <ProjectCard title="Learning Equilibria in Adversarial Team Markov Games (JAX Implementation)" imageSrc={multigrid} tags={["Game Theory", "Reinforcement Learning", 'Python', "JAX"]}>
-          This was a paper recently put out by some people in my lab at UCI: Jingming Yan, Fivos Kalogiannis, and Ioannis Panageas. It is the first paper that learns Nash Equilibria 
-          in adversarial team Markov games. I implemented this paper's algorithm in JAX, which resulted in an efficient implementation.
-          <br/><br/>
-          The GitHub repository's link is {<Link underline="hover" rel="noreferrer" target="_blank" href="https://github.com/nmonette/IPG-JAX-V2" >here</Link>}.
-        </ProjectCard>
-        <ProjectCard title="FIFADraft" imageSrc={fd} tags={["React", "JavaScript", "Firebase"]}>
-          FIFADraft is a fantasy soccer draft app that I made for FIFA tournaments that assists with the creation of custom teams not already 
-          preset by the game. I incorporated database structuring that allows users in the same lobby to draft synchronously.
-          <br/><br/>
-          The website's link is {<Link underline="hover" rel="noreferrer" target="_blank"  href="https://nmonette.github.io/FIFADraft" >here</Link>}.
+        {<Link underline="hover" rel="noreferrer" target="_blank" href="https://devpost.com/software/zotscheduler" >Devpost.</Link>}
         </ProjectCard>
       </Grid>
     </>
