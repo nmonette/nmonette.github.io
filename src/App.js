@@ -72,39 +72,39 @@ function Projects() {
       <HomeBar/>
       <Typography variant="h3" component="center" sx={{mt:10, fontFamily:"Helvetica"}}>Projects</Typography>
       <Grid container justifyContent="center" alignItems="center" columns={12} sx={{mb:40, mt:"10%"}} style={{ minHeight: '100vh', transform: 'scale(1.2)'}}>
-        <ProjectCard title="An Optimisation Framework for Unsupervised Environment Design" imageSrc={ncc} tags={["Environment Design", "Reinforcement Learning", "Optimization"]} >
+        <ProjectCard width="100%" title="An Optimisation Framework for Unsupervised Environment Design" imageSrc={ncc} tags={["Environment Design", "Reinforcement Learning", "Optimization", "JAX"]} >
         <Typography variant="h7" component="left" sx={{mt:10, fontFamily:"Helvetica"}}><b>N. Monette</b>, A. Letcher, M. Beukman, M. Jackson, A. Rutherford, A. Goldie, J. Foerster</Typography><br/>
         <Typography variant="h7" component="left" sx={{mt:10, fontFamily:"Helvetica", fontStyle:"italic"}}>Reinforcement Learning Conference 2025</Typography>
         <br/><br/>
-          This work studies the optimization perspective of unsupervised environment design. Essentially, we learn a distribution over reinforcement learning tasks in order to 
+          {/* This work studies the optimization perspective of unsupervised environment design. Essentially, we learn a distribution over reinforcement learning tasks in order to 
           pursue a curriculum for the agent. We optimize such a distribution with gradients, and thus obtain convergence guarantees even when using neural networks for the
           agent. 
           <br/><br/>
           I was largely responsible for the code implementation of this paper, as well as the general ideas and writing. I also helped with the theory.
-          <br/><br/>
+          <br/><br/> */}
           {<Link underline="hover" rel="noreferrer" target="_blank" href="https://nmonette.github.io/optimising-ued/" >Project Site.</Link>}<br/>
           {<Link underline="hover" rel="noreferrer" target="_blank" href="https://openreview.net/forum?id=WnknYUybWX" >Paper.</Link>}<br/>
           {<Link underline="hover" rel="noreferrer" target="_blank" href="https://github.com/nmonette/NCC-UED" >GitHub.</Link>}
         </ProjectCard>
-        <ProjectCard title="Learning Equilibria in Adversarial Team Markov Games (JAX Implementation)" imageSrc={multigrid} tags={["Game Theory", "Reinforcement Learning", 'Python', "JAX"]}>
+        <ProjectCard width="50%" title="Learning Equilibria in Adversarial Team Markov Games (JAX Implementation)" imageSrc={multigrid} tags={["Game Theory", "Reinforcement Learning", 'Python', "JAX"]}>
         <Typography variant="h7" component="left" sx={{mt:10, fontFamily:"Helvetica"}}><b>N. Monette</b> (Paper by F. Kalogiannis, J. Yan, I. Panageas)</Typography><br/>
         <Typography variant="h10" component="left" sx={{mt:10, fontFamily:"Helvetica", fontStyle:"italic"}}>NeurIPS 2024</Typography>
           <br/><br/>
-          This was a paper recently put out by some people in my lab at UCI. It is the first paper that learns Nash Equilibria 
+          {/* This was a paper recently put out by some people in my lab at UCI. It is the first paper that learns Nash Equilibria 
           in adversarial team Markov games. I implemented this paper's algorithm in JAX, which resulted in an efficient implementation.
-          <br/><br/>
+          <br/><br/> */}
           {<Link underline="hover" rel="noreferrer" target="_blank" href="https://proceedings.neurips.cc/paper_files/paper/2024/file/a8bc668b1559d705221b0e7510c45e48-Paper-Conference.pdf" >Paper</Link>}.<br/>
           {<Link underline="hover" rel="noreferrer" target="_blank" href="https://github.com/nmonette/IPG-JAX-V2" >GitHub</Link>}.
         </ProjectCard>
-        <ProjectCard title="ZotScheduler" imageSrc={peter} tags={["Web Scraping", "Machine Learning", "Python", "JavaScript"]} >
+        <ProjectCard width="100%" title="ZotScheduler" imageSrc={peter} tags={["Web Scraping", "Machine Learning", "Python", "JavaScript"]} >
           <Typography variant="h7" component="left" sx={{mt:10, fontFamily:"Helvetica"}}>P. Cutter, <b>N. Monette</b>, R. Zhang</Typography><br/>
           <Typography variant="h10" component="left" sx={{mt:10, fontFamily:"Helvetica", fontStyle:"italic"}}>HackUCI 2023</Typography>
           <br/><br/>
-          ZotScheduler uses tree-ensemble regression models 
+          {/* ZotScheduler uses tree-ensemble regression models 
           and search algorithms to find the optimal schedule for a UCI student given a set of potential classes for the upcoming quarter.
           <br/><br/>
           I led the AI part of our project, culminating in a "Best AI Hack" award, as well as overall runner-up out of 60+ teams at HackUCI.
-          <br/><br/>
+          <br/><br/> */}
         {<Link underline="hover" rel="noreferrer" target="_blank" href="https://devpost.com/software/zotscheduler" >Devpost.</Link>}
         </ProjectCard>
       </Grid>
