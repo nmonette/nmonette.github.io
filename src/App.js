@@ -98,7 +98,7 @@ function Projects() {
         </ProjectCard>
         <ProjectCard width="100%" title="ZotScheduler" imageSrc={peter} tags={["Web Scraping", "Machine Learning", "Python", "JavaScript"]} >
           <Typography variant="h7" component="left" sx={{mt:10, fontFamily:"Helvetica"}}>P. Cutter, <b>N. Monette</b>, R. Zhang</Typography><br/>
-          <Typography variant="h10" component="left" sx={{mt:10, fontFamily:"Helvetica", fontStyle:"italic"}}>HackUCI 2023</Typography>
+          <Typography variant="h10" component="left" sx={{mt:10, fontFamily:"Helvetica", fontStyle:"italic"}}>HackUCI 2023 (Best AI Hack and 2nd-Place Overall)</Typography>
           <br/><br/>
           {/* ZotScheduler uses tree-ensemble regression models 
           and search algorithms to find the optimal schedule for a UCI student given a set of potential classes for the upcoming quarter.
