@@ -42,7 +42,7 @@ function About() {
               <b> offline</b> data to accelerate the learning of <b>large-scale</b> multi-agent systems under the supervision of prof. <Link rel="noreferrer" target="_blank" href="https://royf.org/" underline="hover">Roy Fox</Link> and <Link rel="noreferrer" target="_blank" href="https://jblanier.net/" underline="hover">JB Lanier</Link>.
             </Typography>
             <Typography sx={{fontFamily:"Helvetica", fontSize:18, mt:1}} variant="body" component="div">
-              <Typography sx={{color:"blue"}} variant="body">News (5/2025)</Typography> My first <Link underline="hover" rel="noreferrer" target="_blank" href="https://openreview.net/forum?id=WnknYUybWX" >paper</Link> (on unsupervised environment design) was accepted to the Reinforcement Learning Conference 2025! 
+              <Typography sx={{color:"blue"}} variant="body">News (5/2025)</Typography> My first <Link underline="hover" rel="noreferrer" target="_blank" href="https://arxiv.org/abs/2505.20659v1" >paper</Link> (on unsupervised environment design) was accepted to the Reinforcement Learning Conference 2025! 
             </Typography>
             <center>
                 <IconButton size="large" href="https://github.com/nmonette" rel="noreferrer" target="_blank">
@@ -83,7 +83,7 @@ function Projects() {
           I was largely responsible for the code implementation of this paper, as well as the general ideas and writing. I also helped with the theory.
           <br/><br/> */}
           {<Link underline="hover" rel="noreferrer" target="_blank" href="https://nmonette.github.io/optimising-ued/" >Project Site.</Link>}<br/>
-          {<Link underline="hover" rel="noreferrer" target="_blank" href="https://openreview.net/forum?id=WnknYUybWX" >Paper.</Link>}<br/>
+          {<Link underline="hover" rel="noreferrer" target="_blank" href="https://arxiv.org/abs/2505.20659v1" >Paper.</Link>}<br/>
           {<Link underline="hover" rel="noreferrer" target="_blank" href="https://github.com/nmonette/NCC-UED" >GitHub.</Link>}
         </ProjectCard>
         <ProjectCard width="50%" title="Learning Equilibria in Adversarial Team Markov Games (JAX Implementation)" imageSrc={multigrid} tags={["Game Theory", "Reinforcement Learning", 'Python', "JAX"]}>
