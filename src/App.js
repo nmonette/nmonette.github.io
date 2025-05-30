@@ -5,6 +5,7 @@ import { Grid, Typography, Link, IconButton } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
+import SchoolIcon from '@mui/icons-material/School';
 
 
 import face from "./IMG_6722.jpeg"
@@ -53,6 +54,9 @@ function About() {
                 </IconButton>
                 <IconButton size="large" href="https://x.com/nathanrmonette/" rel="noreferrer" target="_blank">
                   <XIcon fontSize="inherit" />
+                </IconButton>
+                <IconButton size="large" href="https://scholar.google.com/citations?user=t_pLFtsAAAAJ&hl=en" rel="noreferrer" target="_blank">
+                  <SchoolIcon fontSize="inherit" />
                 </IconButton>
             </center>
           </Grid>
