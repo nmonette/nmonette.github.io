@@ -11,6 +11,16 @@ function Home() {
                 <br/>
                 <h2 style={{color: "black", fontSize: "26pt", margin: 5}}>Nathan Monette</h2>
                 <i style={{margin: 5, color:"lightgrey"}} >[firstname] [lastname]1 at gmail dot com</i>
+                <br/><br/>
+                <div style={{margin: 5}}>
+                    <a href="https://github.com/nmonette" rel="noreferrer" target="_blank">GitHub</a>
+                    <br/>
+                    <a href="https://linkedin.com/in/nathan-monette/" rel="noreferrer" target="_blank">LinkedIn</a>
+                    <br/>
+                    <a href="https://x.com/nathanrmonette/" rel="noreferrer" target="_blank">X</a>
+                    <br/>
+                    <a href="https://scholar.google.com/citations?user=t_pLFtsAAAAJ&hl=en" rel="noreferrer" target="_blank">Scholar</a> 
+                </div> 
             </div>
 
             <div class="right-column">
