@@ -1,0 +1,51 @@
+/* Blur overlay covers entire screen and blurs background */
+.blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 998;
+}
+
+.blur-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Navigation button bottom-left */
+.nav-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Text options displayed above button, no background, black text */
+.text-options {
+  position: fixed;
+  bottom: 100px; /* 50px above button */
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1001;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  text-align: left;
+}
