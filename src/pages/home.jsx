@@ -11,7 +11,7 @@ function Home() {
                 <br/>
                 <h2 style={{color: "black", fontSize: "26pt", margin: 5}}>Nathan Monette</h2>
                 <i style={{margin: 5, color:"lightgrey"}} >[firstname] [lastname]1 at gmail dot com</i>
-                <br/><br/>
+                <br/>
                 <div style={{margin: 5}}>
                     <a href="https://github.com/nmonette" rel="noreferrer" target="_blank">GitHub</a>
                     <br/>
