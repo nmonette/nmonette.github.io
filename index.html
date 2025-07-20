@@ -1,9 +1,26 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+    (function () {
+      const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+      const meta = document.createElement('meta');
+      meta.name = 'viewport';
+
+      if (isMobile) {
+        // Force fixed width like desktop
+        meta.content = 'width=1024';
+      } else {
+        // Standard responsive behavior on desktop
+        meta.content = 'width=device-width, initial-scale=1.0';
+      }
+
+      document.head.appendChild(meta);
+    })();
+  </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png+xml" href="no_mouth.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nathan Monette</title>
   </head>
   <body>
