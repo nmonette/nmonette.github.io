@@ -13,8 +13,10 @@
   color: white;
 }
 
+
 .button-container:hover .hover-text {
   opacity: 1;
+  transform: scale(1.05);
 }
 
 .button-row {

@@ -62,7 +62,7 @@ function Projects() {
                 imgWidth="100%"
            />
         </div>
-        <NavButton pageList={["home", "cv"]} />
+        <NavButton />
         </>
     )
 }

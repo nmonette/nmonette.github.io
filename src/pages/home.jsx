@@ -43,7 +43,7 @@ function Home() {
                     <span style={{color: "#f21a1a"}}>[5/2025] </span>My first <a underline="hover" rel="noreferrer" target="_blank" href="https://arxiv.org/abs/2505.20659v1" >paper</a> (on unsupervised environment design) was accepted to the Reinforcement Learning Conference 2025! 
                 </h2>
             </div>
-            <NavButton pageList={["projects", "cv"]} />
+            <NavButton />
         </>
     )
 }
