@@ -1,5 +1,5 @@
 import './App.css'
-import "./hover_button.css"
+import "./pages/hover_button.css"
 import homeImage from './assets/home_logo.png'
 import projectsImage from './assets/projects_logo.png'
 import cvImage from './assets/cv_logo.png'
@@ -11,21 +11,7 @@ import Projects from './pages/projects.jsx'
 import { createHashRouter, RouterProvider } from "react-router";
 import { useNavigate } from "react-router";
 
-function HoverButton({image, text, onClick}) {
-  return (
-    <div className="button-container">
-      <img
-        onClick={onClick}
-        src={image}
-        alt="Hover Button"
-        className="hover-button"
-        height={100}
-        style={{clipPath: 'inset(5px)'}}
-      />
-      <div className="hover-text">{text}</div>
-    </div>
-  );
-}
+import HoverButton from './pages/hover_button.jsx';
 
 function Navigator() {
 

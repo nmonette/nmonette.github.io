@@ -33,19 +33,43 @@
   z-index: 1000;
 }
 
-/* Text options displayed above button, no background, black text */
-.text-options {
+/* Centered modal box for navigation */
+.nav-modal {
   position: fixed;
-  bottom: 100px; /* 50px above button */
-  left: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222222;
+  color: white;;
+  border-radius: 16px;
+  padding: 30px 40px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  gap: 20px;
   z-index: 1001;
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 90vw;
+  width: 300px;
+  text-align: center;
+}
+
+/* Logo button inside the modal */
+.logo-button {
+  background: none;
+  border: none;
   cursor: pointer;
-  user-select: none;
-  text-align: left;
+  transition: transform 0.2s ease;
+  padding: 0;
+}
+
+.logo-button:hover {
+  transform: scale(1.05);
+}
+
+/* Logo image inside button */
+.logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }

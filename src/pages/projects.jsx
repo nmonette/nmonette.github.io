@@ -3,7 +3,7 @@ import ncc from "../assets/ncc.svg"
 import zot from "../assets/zot.jpeg"
 import adv_team from "../assets/adv_team.png"
 
-import NavButton  from "./nav_button";
+import NavButton  from "./nav_button.jsx";
 
 function ProjectBox({ img, title, authors, conf, links, imgWidth }) {
   const authorFunc = (author, i) => {
@@ -62,7 +62,7 @@ function Projects() {
                 imgWidth="100%"
            />
         </div>
-        <NavButton otherPage={{ url: "home", title: "Home" }} />
+        <NavButton pageList={["home", "cv"]} />
         </>
     )
 }
