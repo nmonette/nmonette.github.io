@@ -36,7 +36,8 @@ function ProjectBox({ img, title, authors, conf, links, imgWidth }) {
 function Projects() {
     return (
         <>
-        <div>
+        <NavButton />
+        <div style={{marginTop: "30px"}}>
             <ProjectBox 
                 img={ncc}
                 title="An Optimisation Framework for Unsupervised Environment Design"
@@ -62,7 +63,6 @@ function Projects() {
                 imgWidth="100%"
            />
         </div>
-        <NavButton />
         </>
     )
 }

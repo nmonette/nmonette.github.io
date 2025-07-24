@@ -17,7 +17,7 @@ export default function CloseButton() {
         padding: 0,
         fontSize: "45px",
         color: "white",
-        marginBottom: "10px"
+        marginBottom: "10px",
       }}
       aria-label="Close navigation"
     >

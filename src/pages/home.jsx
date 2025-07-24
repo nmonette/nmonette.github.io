@@ -6,6 +6,7 @@ import NavButton  from "./nav_button.jsx";
 function Home() {
     return (
         <>
+        <div className="container">
             <div class="left-column">
                 <img src={face} alt="Nathan Monette" class="profile-image" style={{width: "99.8%"}}/>
                 <br/>
@@ -42,6 +43,7 @@ function Home() {
                 <h2>
                     <span style={{color: "#f21a1a"}}>[5/2025] </span>My first <a underline="hover" rel="noreferrer" target="_blank" href="https://arxiv.org/abs/2505.20659v1" >paper</a> (on unsupervised environment design) was accepted to the Reinforcement Learning Conference 2025! 
                 </h2>
+            </div>
             </div>
             <NavButton />
         </>
