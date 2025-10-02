@@ -31,7 +31,7 @@ function Navigator() {
       <div className="button-row">
         <HoverButton onClick={() => navigate("/home")} image={homeImage} text="Home" />
         <HoverButton onClick={() => navigate("/projects")} image={projectsImage} text="Projects" />
-        <HoverButton onClick={() => window.open(resume, '_blank', 'noopener,noreferrer')} image={cvImage} text="C.V." />
+        <HoverButton onClick={() => window.open(resume, '_blank', 'noopener,noreferrer')} image={cvImage} text="Résumé" />
       </div>
       </div>
     </>
