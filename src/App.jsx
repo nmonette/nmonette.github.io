@@ -3,7 +3,7 @@ import "./pages/hover_button.css"
 import homeImage from './assets/home_logo.png'
 import projectsImage from './assets/projects_logo.png'
 import cvImage from './assets/cv_logo.png'
-import resume from './assets/resume.pdf'
+import resume from './assets/cv.pdf'
 
 import Home from './pages/home.jsx'
 import Projects from './pages/projects.jsx'
@@ -31,7 +31,7 @@ function Navigator() {
       <div className="button-row">
         <HoverButton onClick={() => navigate("/home")} image={homeImage} text="Home" />
         <HoverButton onClick={() => navigate("/projects")} image={projectsImage} text="Projects" />
-        <HoverButton onClick={() => window.open(resume, '_blank', 'noopener,noreferrer')} image={cvImage} text="Résumé" />
+        <HoverButton onClick={() => window.open(resume, '_blank', 'noopener,noreferrer')} image={cvImage} text="C.V." />
       </div>
       </div>
     </>
