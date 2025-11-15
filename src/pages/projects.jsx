@@ -2,7 +2,6 @@ import "./projects.css";
 import ncc from "../assets/ncc.svg"
 import dags from "../assets/dags.svg"
 import dags_paper from "../assets/dags_paper.pdf"
-import zot from "../assets/zot.jpeg"
 import adv_team from "../assets/adv_team.png"
 
 import NavButton  from "./nav_button.jsx";
@@ -64,14 +63,6 @@ function Projects() {
                 links={[{url:"https://proceedings.neurips.cc/paper_files/paper/2024/file/a8bc668b1559d705221b0e7510c45e48-Paper-Conference.pdf", title:"Paper"}, {url: "https://github.com/nmonette/IPG-JAX-V2", title: "GitHub"}]}
                 imgWidth="100%"
            />
-           {/* <ProjectBox 
-                img={zot}
-                title="ZotScheduler"
-                authors = {["P. Cutter", "N. Monette", "R. Zhang"]}
-                conf="HackUCI 2023 (Best AI Hack and 2nd-Place Overall)"
-                links={[{url:"https://devpost.com/software/zotscheduler", title:"DevPost"}]}
-                imgWidth="100%"
-           /> */}
         </div>
         </>
     )

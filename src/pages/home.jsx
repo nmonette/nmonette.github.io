@@ -1,7 +1,7 @@
 import face from '../assets/face.jpeg';
 import "./home.css";
 import ued_notes from '../assets/ued_notes.pdf'
-
+import dags_paper from "../assets/dags_paper.pdf"
 import NavButton  from "./nav_button.jsx";
 
 function Home() {
@@ -42,9 +42,9 @@ function Home() {
 
                 <h1>News</h1>
                 <h2>
-                    <span style={{color: "#f21a1a"}}>[5/2025] </span>My first <a underline="hover" rel="noreferrer" target="_blank" href="https://arxiv.org/abs/2505.20659v1" >paper</a> (on unsupervised environment design) was accepted to the Reinforcement Learning Conference 2025! 
-                    <br/>
-                    <span style={{color: "#f21a1a"}}>[9/2025] </span>Released some <a underline="hover" rel="noreferrer" target="_blank" href={ued_notes} >notes</a> on unsupervised environment design (UED).
+                    <div><span style={{color: "#f21a1a"}}>[5/2025] </span>My first <a underline="hover" rel="noreferrer" target="_blank" href="https://arxiv.org/abs/2505.20659v1" >paper</a> (on unsupervised environment design) was accepted to the Reinforcement Learning Conference 2025! </div>
+                    <div style={{marginTop: "8px"}}><span style={{color: "#f21a1a"}}>[9/2025] </span>Released some <a underline="hover" rel="noreferrer" target="_blank" href={ued_notes} >notes</a> on unsupervised environment design (UED).</div>
+                    <div style={{marginTop: "8px"}}><span style={{marginTop: "0.0001px", color: "#f21a1a"}}>[11/2025] </span>New <a underline="hover" rel="noreferrer" target="_blank" href={dags_paper} >preprint!</a> on multi-agent RL.</div>
                 </h2>
             </div>
             </div>
