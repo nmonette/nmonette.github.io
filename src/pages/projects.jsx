@@ -39,20 +39,22 @@ function Projects() {
         <>
         <NavButton />
         <div style={{marginTop: "30px"}}>
+          <h1>Publications</h1>
+          <ProjectBox 
+                img={ncc}
+                title="An Optimisation Framework for Unsupervised Environment Design"
+                authors = {["N. Monette", "A. Letcher", "M. Beukman", "M. Jackson", "A. Rutherford", "A. Goldie", "J. Foerster"]}
+                conf="RLC 2025"
+                links={[{url:"https://nmonette.github.io/optimising-ued/", title:"Project Site"}, {url: "https://arxiv.org/abs/2505.20659", title: "Paper"}, {url: "https://github.com/nmonette/NCC-UED", title: "GitHub"}]}
+                imgWidth="100%"
+            />
+            <h1>Preprints & Projects</h1>
             <ProjectBox 
                 img={dags}
                 title="Leveraging Offline Data for Large-Scale Multi-Agent Reinforcement Learning"
                 authors = {["J. Lanier*", "N. Monette*", "Roy Fox"]}
                 conf="preprint"
                 links={[{url: dags_paper, title: "Paper"}]}
-                imgWidth="100%"
-            />
-            <ProjectBox 
-                img={ncc}
-                title="An Optimisation Framework for Unsupervised Environment Design"
-                authors = {["N. Monette", "A. Letcher", "M. Beukman", "M. Jackson", "A. Rutherford", "A. Goldie", "J. Foerster"]}
-                conf="RLC 2025"
-                links={[{url:"https://nmonette.github.io/optimising-ued/", title:"Project Site"}, {url: "https://arxiv.org/abs/2505.20659", title: "Paper"}, {url: "https://github.com/nmonette/NCC-UED", title: "GitHub"}]}
                 imgWidth="100%"
             />
             <ProjectBox 
