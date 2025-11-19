@@ -28,14 +28,14 @@ function Home() {
             <div class="right-column">
                 <h1>About</h1>
                 <h2>
-                I'm currently an incoming master's student at the University of Oxford, pursuing a MSc in advanced computer science.
+                I'm currently pursuing a MSc in advanced computer science at the University of Oxford.
                 <br/><br/>
                 Previously I completed my BSc in computer science at the University of California Irvine, where I graduated with honors in June 2025.
                 </h2>
 
                 <h1>Research</h1>
                 <h2>
-                    I am working on <b>robust reinforcement learning</b> and its intersection with <b>game theory</b> and <b>curriculum design</b>. I am fortunate to be working under the supervision of prof. <a rel="noreferrer" target="_blank" href="https://www.jakobfoerster.com/" underline="hover">Jakob Foerster</a>.
+                    I am working on <b>curriculum</b> and <b>multi-agent</b> reinforcement learning with prof. <a rel="noreferrer" target="_blank" href="https://www.jakobfoerster.com/" underline="hover">Jakob Foerster</a>. 
                     <br/><br/>
                     During my undergrad I worked on <b>multi-agent reinforcement learning</b> and <b>game theory</b> with profs. <a rel="noreferrer" target="_blank" href="https://royf.org/" underline="hover">Roy Fox</a> and <a rel="noreferrer" target="_blank" href="https://panageas.github.io/" underline="hover">Ioannis Panageas</a>.
                 </h2>
