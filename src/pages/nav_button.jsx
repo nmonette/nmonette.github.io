@@ -1,8 +1,25 @@
 import { useNavigate } from 'react-router';
 
-export default function CloseButton() {
+import { useEffect } from "react";
+
+export function useEscapeToHome() {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        navigate("/");
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [navigate]);
+}
+
+export default function CloseButton() {
+  const navigate = useNavigate();
+  useEscapeToHome();
   return (
     <button
       onClick={() => navigate('/')}
