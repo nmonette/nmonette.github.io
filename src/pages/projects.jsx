@@ -38,7 +38,7 @@ function Projects() {
     return (
         <>
         <NavButton />
-        <div style={{marginTop: "30px"}}>
+        <div style={{marginTop: "30px", padding: "0 24px"}}>
           <h1>Publications</h1>
           <ProjectBox 
                 img={ncc}
