@@ -54,7 +54,7 @@ function Projects() {
                 title="Leveraging Offline Data for Large-Scale Multi-Agent Reinforcement Learning"
                 authors = {["J. Lanier*", "N. Monette*", "Roy Fox"]}
                 conf="preprint (November 2025)"
-                links={[{url: dags_paper, title: "Paper"}]}
+                links={[{url: "https://arxiv.org/abs/2605.14379", title: "Paper"}]}
                 imgWidth="100%"
             />
             <ProjectBox 

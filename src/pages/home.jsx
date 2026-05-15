@@ -42,7 +42,7 @@ function Home() {
                 <h1>News</h1>
                 <h2>
                     <div ><span style={{marginTop: "0.0001px", color: "#ef4444"}}>[4/2026] </span>Will be starting my PhD at NYU in Autumn 2026!</div>
-                    <div style={{marginTop: "8px"}}><span style={{color: "#ef4444"}}>[11/2025] </span>New <a rel="noreferrer" target="_blank" href={dags_paper} >preprint!</a> on multi-agent RL.</div>
+                    <div style={{marginTop: "8px"}}><span style={{color: "#ef4444"}}>[11/2025] </span>New <a rel="noreferrer" target="_blank" href="https://arxiv.org/abs/2605.14379" >preprint!</a> on multi-agent RL.</div>
                     <div style={{marginTop: "8px"}}><span style={{color: "#ef4444"}}>[10/2025] </span>Gave a talk at the 2025 London Open Endedness Summit hosted by <a rel="noreferrer" target="_blank" href="https://www.imperial.ac.uk/adaptive-intelligent-robotics/" >AIRL</a> (slides <a rel="noreferrer" target="_blank" href="https://docs.google.com/presentation/d/1Pm9gHyRE1yei96dhMb8_nd0m868zMowXOm2CwCpifjY/edit?usp=sharing" >here</a>).</div>
                     <div style={{marginTop: "8px"}}><span style={{color: "#ef4444"}}>[9/2025] </span>Released some <a rel="noreferrer" target="_blank" href={ued_notes} >notes</a> on unsupervised environment design (UED).</div>
                     <div style={{marginTop: "8px"}}><span style={{color: "#ef4444"}}>[5/2025] </span>My first <a rel="noreferrer" target="_blank" href="https://arxiv.org/abs/2505.20659v1" >paper</a> (on unsupervised environment design) was accepted to the Reinforcement Learning Conference 2025! </div>
