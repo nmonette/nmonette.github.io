@@ -51,7 +51,7 @@ function Projects() {
             <h1>Preprints & Projects</h1>
             <ProjectBox 
                 img={dags}
-                title="Leveraging Offline Data for Large-Scale Multi-Agent Reinforcement Learning"
+                title="Data-Augmented Game Starts for Accelerating Self-Play Exploration in Imperfect Information Games"
                 authors = {["J. Lanier*", "N. Monette*", "Roy Fox"]}
                 conf="preprint (November 2025)"
                 links={[{url: "https://arxiv.org/abs/2605.14379", title: "Paper"}]}
