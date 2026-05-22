@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router';
+import { useNavigate, useLocation } from 'react-router';
 
 import { useEffect } from "react";
 
@@ -19,10 +19,17 @@ export function useEscapeToHome() {
 
 export default function CloseButton() {
   const navigate = useNavigate();
+  const location = useLocation();
   useEscapeToHome();
   return (
     <button
-      onClick={() => navigate(-1)}
+      onClick={() => {
+        if (location.key && location.key !== "default") {
+          navigate(-1);
+        } else {
+          navigate("/");
+        }
+      }}
       style={{
         position: 'fixed',
         top: '16px',
