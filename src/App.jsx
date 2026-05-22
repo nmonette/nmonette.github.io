@@ -2,11 +2,14 @@ import './App.css'
 import "./pages/hover_button.css"
 import homeImage from './assets/home_logo.png'
 import projectsImage from './assets/projects_logo.png'
+import blogImage from './assets/blog_logo.png'
 import cvImage from './assets/cv_logo.png'
 import resume from './assets/cv.pdf'
 
 import Home from './pages/home.jsx'
 import Projects from './pages/projects.jsx'
+import Blog from './pages/blog.jsx'
+import BlogPost from './pages/blog_post.jsx'
 
 import { createHashRouter, RouterProvider } from "react-router";
 import { useNavigate } from "react-router";
@@ -31,6 +34,7 @@ function Navigator() {
       <div className="button-row">
         <HoverButton onClick={() => navigate("/home")} image={homeImage} text="Home" />
         <HoverButton onClick={() => navigate("/projects")} image={projectsImage} text="Projects" />
+          <HoverButton onClick={() => navigate("/blog")} image={blogImage} text="Blog" />
         <HoverButton onClick={() => window.open(resume, '_blank', 'noopener,noreferrer')} image={cvImage} text="C.V." />
       </div>
       </div>
@@ -47,6 +51,14 @@ function App() {
     {
         path: "home",
         element: <Home />,
+    },
+    {
+        path: "blog",
+        element: <Blog />,
+    },
+    {
+        path: "blog/:slug",
+        element: <BlogPost />,
     },
     {
       path: "projects",

@@ -22,7 +22,7 @@ export default function CloseButton() {
   useEscapeToHome();
   return (
     <button
-      onClick={() => navigate('/')}
+      onClick={() => navigate(-1)}
       style={{
         position: 'fixed',
         top: '16px',

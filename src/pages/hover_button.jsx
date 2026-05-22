@@ -8,7 +8,7 @@ export default function HoverButton({image, text, onClick}) {
         src={image}
         alt="Hover Button"
         className="hover-button"
-        height={100}
+        height={120}
         style={{clipPath: 'inset(5px)'}}
       />
       <div className="hover-text">{text}</div>
