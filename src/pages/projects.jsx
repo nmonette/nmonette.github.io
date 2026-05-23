@@ -53,18 +53,10 @@ function Projects() {
                 img={dags}
                 title="Data-Augmented Game Starts for Accelerating Self-Play Exploration in Imperfect Information Games"
                 authors = {["J. Lanier*", "N. Monette*", "Roy Fox"]}
-                conf="preprint (November 2025)"
+                conf="arXiv (November 2025)"
                 links={[{url: "https://arxiv.org/abs/2605.14379", title: "Paper"}]}
                 imgWidth="100%"
             />
-            <ProjectBox 
-                img={adv_team}
-                title="Learning Equilibria in Adversarial Team Markov Games (JAX Implementation)"
-                authors = {["N. Monette", "(Paper by F. Kalogiannis, J. Yan, I. Panageas)"]}
-                conf="NeurIPS 2024"
-                links={[{url:"https://proceedings.neurips.cc/paper_files/paper/2024/file/a8bc668b1559d705221b0e7510c45e48-Paper-Conference.pdf", title:"Paper"}, {url: "https://github.com/nmonette/IPG-JAX-V2", title: "GitHub"}]}
-                imgWidth="100%"
-           />
         </div>
         </>
     )

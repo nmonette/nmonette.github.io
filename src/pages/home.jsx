@@ -29,14 +29,14 @@ function Home() {
                 <h1>About</h1>
                 <h2>
                 I'm currently pursuing a MSc in advanced computer science at the University of Oxford.
-                <br/><br/>
+                <div style={{ height: '0.5em' }} />
                 Previously I completed my BSc in computer science at the University of California Irvine, where I graduated with honors in June 2025.
                 </h2>
 
                 <h1>Research</h1>
                 <h2>
                     I am working on <b>curriculum</b> and <b>multi-agent</b> reinforcement learning with prof. <a rel="noreferrer" target="_blank" href="https://www.jakobfoerster.com/">Jakob Foerster</a>. 
-                    <br/><br/>
+                    <div style={{ height: '0.5em' }} />
                     During my undergrad I worked on <b>multi-agent reinforcement learning</b> and <b>game theory</b> with profs. <a rel="noreferrer" target="_blank" href="https://royf.org/">Roy Fox</a> and <a rel="noreferrer" target="_blank" href="https://panageas.github.io/">Ioannis Panageas</a>.
                 </h2>
                 <h1>News</h1>
