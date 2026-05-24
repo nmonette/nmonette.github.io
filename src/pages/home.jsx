@@ -1,7 +1,6 @@
 import face from '../assets/face.jpeg';
 import "./home.css";
 import ued_notes from '../assets/ued_notes.pdf'
-import dags_paper from "../assets/dags_paper.pdf"
 import NavButton  from "./nav_button.jsx";
 
 function Home() {

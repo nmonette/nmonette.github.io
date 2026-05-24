@@ -2,6 +2,7 @@ import { Link } from "react-router";
 
 import NavButton from "./nav_button.jsx";
 import { posts } from "../blogs/index.js";
+import ued_notes from '../assets/ued_notes.pdf'
 import "./blog.css";
 
 function Blog() {
@@ -21,6 +22,10 @@ function Blog() {
             ))}
           </ol>
         )}
+        <h1>Notes</h1>
+        <ol className="blog-list">
+            <li><a rel="noreferrer" target="_blank" href={ued_notes} >On Unsupervised Environment Design</a></li>
+          </ol>
       </div>
     </>
   );

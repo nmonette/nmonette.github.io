@@ -1,4 +1,4 @@
-# On algorithmic thinking
+# On Algorithmic Thinking
 
 As a an early-undergrad student with poor mood regulation, I often wrote bad poetry as an outlet for whatever I had going on at the time. While it primarily was a way of managing my emotions, it also shined a light on how I think, and why I enjoy my research.
 
