@@ -55,6 +55,8 @@ To me, this idea is not particularly complicated, but I think this is largely be
   </video>
 </center>
 
+Namely, when the row player plays rock and the column player plays paper, the column player would win, so the column player's "payoff" would be $1$.
+
 For each iteration of DO, the agents need to add their best response to the opponent's meta-strategy. To walk through the steps, we first would start with both players having just $R$ (rock) as their possible strategies. In this case, each player would then find the best possible improved action (best response): $P$ (paper)! Upon expanding the matrix, each player then needs to find the best-responding action to the  __Nash Equilibrium__ (NE) strategy of their opponent (with the limited set of actions). 
 
 The optimal strategy for each agent in this case is to always play the second action, so each agent would then play $P$ (paper) with 100% probability. Finally, in order to beat paper, both agents would add $S$ (scissors) to their repetoires, and thus would complete the payoff matrix, where one can then use their favorite min-max optimization technique to solve the NE of the 3-action game. I've visualized this procedure here:
