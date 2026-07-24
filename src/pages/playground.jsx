@@ -111,8 +111,15 @@ function Axes() {
 }
 
 function OptimisticTrajectory({ points, iteration }) {
-  const visiblePoints = points.slice(0, iteration + 1);
+  const safeIteration = Math.min(
+    Math.max(Number.isFinite(iteration) ? iteration : 0, 0),
+    points.length - 1,
+  );
+  const visiblePoints = points.slice(0, safeIteration + 1);
   const current = visiblePoints[visiblePoints.length - 1];
+
+  if (!current) return null;
+
   const payoff = current.x * current.y * PAYOFF_SCALE;
 
   const surfacePoints = visiblePoints.map(({ x, y }) => [
@@ -226,27 +233,36 @@ function Playground() {
   const [iteration, setIteration] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const iterationRef = useRef(0);
+  const animationFrameRef = useRef(null);
+  const animationEpochRef = useRef(0);
 
   const points = useMemo(
     () => simulateOgda({ x0, y0, stepSize, maxSteps: 200 }),
     [x0, y0, stepSize],
   );
 
-  const current = points[iteration] ?? points[points.length - 1];
+  const safeIteration = Math.min(
+    Math.max(Number.isFinite(iteration) ? iteration : 0, 0),
+    points.length - 1,
+  );
+  const current = points[safeIteration] ?? points[0];
 
   useEffect(() => {
     if (!isRunning) return undefined;
 
     const startingIteration = iterationRef.current;
     const startedAt = window.performance.now();
-    let animationFrame;
+    const animationEpoch = animationEpochRef.current;
 
     const animate = (now) => {
-      const elapsedIterations = Math.floor(
-        (now - startedAt) / MILLISECONDS_PER_ITERATION,
+      if (animationEpoch !== animationEpochRef.current) return;
+
+      const elapsedIterations = Math.max(
+        0,
+        Math.floor((now - startedAt) / MILLISECONDS_PER_ITERATION),
       );
       const nextIteration = Math.min(
-        startingIteration + elapsedIterations,
+        Math.max(startingIteration + elapsedIterations, 0),
         points.length - 1,
       );
 
@@ -256,24 +272,40 @@ function Playground() {
       }
 
       if (nextIteration >= points.length - 1) {
+        animationFrameRef.current = null;
         setIsRunning(false);
         return;
       }
 
-      animationFrame = window.requestAnimationFrame(animate);
+      animationFrameRef.current = window.requestAnimationFrame(animate);
     };
 
-    animationFrame = window.requestAnimationFrame(animate);
-    return () => window.cancelAnimationFrame(animationFrame);
+    animationFrameRef.current = window.requestAnimationFrame(animate);
+    return () => {
+      if (animationFrameRef.current !== null) {
+        window.cancelAnimationFrame(animationFrameRef.current);
+        animationFrameRef.current = null;
+      }
+    };
   }, [isRunning, points.length]);
 
   const reset = () => {
+    animationEpochRef.current += 1;
+    if (animationFrameRef.current !== null) {
+      window.cancelAnimationFrame(animationFrameRef.current);
+      animationFrameRef.current = null;
+    }
     setIsRunning(false);
     iterationRef.current = 0;
     setIteration(0);
   };
 
   const updateParameter = (setter) => (value) => {
+    animationEpochRef.current += 1;
+    if (animationFrameRef.current !== null) {
+      window.cancelAnimationFrame(animationFrameRef.current);
+      animationFrameRef.current = null;
+    }
     setter(value);
     iterationRef.current = 0;
     setIteration(0);
@@ -281,11 +313,21 @@ function Playground() {
   };
 
   const toggleRun = () => {
+    if (isRunning) {
+      animationEpochRef.current += 1;
+      if (animationFrameRef.current !== null) {
+        window.cancelAnimationFrame(animationFrameRef.current);
+        animationFrameRef.current = null;
+      }
+      setIsRunning(false);
+      return;
+    }
+
     if (iteration >= points.length - 1) {
       iterationRef.current = 0;
       setIteration(0);
     }
-    setIsRunning((running) => !running);
+    setIsRunning(true);
   };
 
   const formatCoordinate = (value) =>
@@ -325,7 +367,7 @@ function Playground() {
                 </div>
               }
             >
-              <Scene points={points} iteration={iteration} />
+              <Scene points={points} iteration={safeIteration} />
             </Canvas>
             <span className="axis-label axis-label-x">x</span>
             <span className="axis-label axis-label-y">y</span>
@@ -333,7 +375,7 @@ function Playground() {
           </div>
 
           <div className="iteration-strip">
-            <span>t = {iteration}</span>
+            <span>t = {safeIteration}</span>
             <span>x = {formatCoordinate(current.x)}</span>
             <span>y = {formatCoordinate(current.y)}</span>
             <span>xy = {formatCoordinate(current.x * current.y)}</span>

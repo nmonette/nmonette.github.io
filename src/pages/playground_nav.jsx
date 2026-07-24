@@ -4,6 +4,8 @@ const playgrounds = [
   { number: 1, title: "Other-play" },
   { number: 2, title: "Thompson sampling for bandits" },
   { number: 3, title: "Optimistic gradient descent" },
+  { number: 4, title: "CFR for Kuhn Poker" },
+  { number: 5, title: "Double Oracle in Colonel Blotto" },
 ];
 
 function PlaygroundNav({ current }) {

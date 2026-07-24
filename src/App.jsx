@@ -21,6 +21,8 @@ import HoverButton from './pages/hover_button.jsx';
 const Playground = lazy(() => import('./pages/playground.jsx'));
 const BanditPlayground = lazy(() => import('./pages/bandit_playground.jsx'));
 const OtherPlayground = lazy(() => import('./pages/other_playground.jsx'));
+const KuhnCfrPlayground = lazy(() => import('./pages/kuhn_cfr_playground.jsx'));
+const DoubleOraclePlayground = lazy(() => import('./pages/double_oracle_playground.jsx'));
 
 function Navigator() {
 
@@ -105,6 +107,22 @@ function App() {
       element: (
         <Suspense fallback={<div className="route-loading">Loading playground…</div>}>
           <Playground />
+        </Suspense>
+      ),
+    },
+    {
+      path: "playground/04",
+      element: (
+        <Suspense fallback={<div className="route-loading">Loading playground…</div>}>
+          <KuhnCfrPlayground />
+        </Suspense>
+      ),
+    },
+    {
+      path: "playground/05",
+      element: (
+        <Suspense fallback={<div className="route-loading">Loading playground…</div>}>
+          <DoubleOraclePlayground />
         </Suspense>
       ),
     }
