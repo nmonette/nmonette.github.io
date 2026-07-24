@@ -17,14 +17,16 @@ export function useEscapeToHome() {
   }, [navigate]);
 }
 
-export default function CloseButton() {
+export default function CloseButton({ alwaysHome = false }) {
   const navigate = useNavigate();
   const location = useLocation();
   useEscapeToHome();
   return (
     <button
       onClick={() => {
-        if (location.key && location.key !== "default") {
+        if (alwaysHome) {
+          navigate("/");
+        } else if (location.key && location.key !== "default") {
           navigate(-1);
         } else {
           navigate("/");

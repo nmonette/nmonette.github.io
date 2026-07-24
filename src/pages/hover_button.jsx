@@ -1,13 +1,13 @@
 import "./hover_button.css";
 
-export default function HoverButton({image, text, onClick}) {
+export default function HoverButton({image, text, onClick, imageClassName = ""}) {
   return (
     <div className="button-container">
       <img
         onClick={onClick}
         src={image}
         alt="Hover Button"
-        className="hover-button"
+        className={`hover-button ${imageClassName}`.trim()}
         height={120}
         style={{clipPath: 'inset(5px)'}}
       />
@@ -15,4 +15,3 @@ export default function HoverButton({image, text, onClick}) {
     </div>
   );
 }
-

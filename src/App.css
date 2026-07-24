@@ -1,3 +1,9 @@
 #root {
   margin: 0 auto;
 }
+.route-loading {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  color: #b0b0b0;
+}

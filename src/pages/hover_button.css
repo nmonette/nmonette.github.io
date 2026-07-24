@@ -17,6 +17,11 @@
   transform: scale(1.1);
 }
 
+.hover-button.playground-logo {
+  height: 130px;
+  margin-bottom: -10px;
+}
+
 .button-container:hover .hover-text {
   opacity: 1;
 }
@@ -24,6 +29,14 @@
 .button-row {
   display: flex;
   justify-content: center;  /* or 'space-between', 'space-around' */
+  flex-wrap: wrap;
   gap: 10px;                /* space between buttons */
   margin: 20px;
+  max-width: 760px;
+}
+
+@media (max-width: 700px) {
+  .button-row {
+    max-width: 430px;
+  }
 }

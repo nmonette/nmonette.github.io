@@ -1,0 +1,347 @@
+.bandit-page {
+  padding-top: 28px;
+  padding-bottom: 52px;
+}
+
+.bandit-page .playground-header {
+  margin-bottom: 18px;
+}
+
+.bandit-page .playground-header h1 {
+  font-size: clamp(2.15rem, 3.7vw, 3.8rem);
+}
+
+.bandit-shell {
+  width: min(1480px, 100%);
+  margin: 0 auto;
+}
+
+.bandit-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 54px;
+  box-sizing: border-box;
+  margin-bottom: 14px;
+  padding: 8px 10px 8px 16px;
+  background: #292929;
+  border: 1px solid #3b3b3b;
+  border-radius: 10px;
+}
+
+.bandit-live-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+  color: #818181;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.bandit-live-metrics strong {
+  margin-left: 3px;
+  color: #f2f2f2;
+  font-weight: 550;
+}
+
+.bandit-playback {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.bandit-playback .playground-button {
+  padding: 8px 14px;
+}
+
+.bandit-panels {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: 14px;
+  align-items: stretch;
+}
+
+.bandit-card {
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 14px;
+  background: #2c2c2c;
+  border: 1px solid #3b3b3b;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+}
+
+.bandit-card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 42px;
+  margin-bottom: 9px;
+}
+
+.bandit-card-heading h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 520;
+}
+
+.belief-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 15px;
+  color: #8d8d8d;
+  font-size: 0.76rem;
+}
+
+.belief-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.belief-legend span::before {
+  width: 14px;
+  height: 2px;
+  content: "";
+}
+
+.legend-belief::before {
+  background: #66ccff;
+}
+
+.legend-truth::before {
+  background: repeating-linear-gradient(
+    90deg,
+    #ef4444 0 4px,
+    transparent 4px 7px
+  );
+}
+
+.belief-list {
+  display: grid;
+  gap: 8px;
+}
+
+.belief-row {
+  padding: 9px 10px 2px;
+  background: #272727;
+  border: 1px solid #383838;
+  border-radius: 8px;
+  transition:
+    border-color 120ms ease,
+    background 120ms ease;
+}
+
+.belief-row.selected {
+  background: #292d2f;
+  border-color: rgba(102, 204, 255, 0.58);
+}
+
+.belief-row-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 0 4px;
+}
+
+.belief-row-header > div:first-child {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+}
+
+.belief-row-header strong {
+  color: #f2f2f2;
+  font-size: 0.9rem;
+  font-weight: 570;
+}
+
+.belief-row-header span {
+  color: #818181;
+  font-size: 0.74rem;
+}
+
+.belief-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.belief-meta strong {
+  color: #ef4444;
+  font-size: 0.76rem;
+}
+
+.belief-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.belief-grid,
+.regret-grid {
+  stroke: #3a3a3a;
+  stroke-width: 1;
+}
+
+.belief-axis,
+.regret-axis {
+  stroke: #686868;
+  stroke-width: 1.2;
+}
+
+.belief-tick,
+.regret-tick,
+.regret-label {
+  fill: #777;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 10px;
+  text-anchor: middle;
+}
+
+.belief-density {
+  fill: none;
+  stroke: #66ccff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.2;
+}
+
+.truth-line {
+  stroke: #ef4444;
+  stroke-dasharray: 5 4;
+  stroke-width: 1.7;
+}
+
+.posterior-mean {
+  fill: #66ccff;
+  stroke: #272727;
+  stroke-width: 2;
+}
+
+.regret-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.regret-value {
+  color: #ef4444;
+  font-size: 1.2rem;
+  font-weight: 560;
+  font-variant-numeric: tabular-nums;
+}
+
+.regret-chart-wrap {
+  display: grid;
+  flex: 1;
+  min-height: 365px;
+  place-items: center;
+  background: #272727;
+  border: 1px solid #383838;
+  border-radius: 8px;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.regret-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.regret-y-tick {
+  dominant-baseline: middle;
+  text-anchor: end;
+}
+
+.regret-label {
+  fill: #a1a1a1;
+  font-size: 12px;
+}
+
+.regret-curve {
+  fill: none;
+  stroke: #ef4444;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+
+.regret-endpoint {
+  fill: #ef4444;
+  stroke: #ffd0d0;
+  stroke-width: 1.5;
+}
+
+@media (max-width: 1080px) {
+  .bandit-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .regret-chart-wrap {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 700px) {
+  .bandit-status {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .bandit-live-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 14px;
+  }
+
+  .bandit-playback {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bandit-card {
+    padding: 12px;
+  }
+
+  .bandit-card-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .belief-legend {
+    justify-content: flex-start;
+  }
+
+  .belief-row-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .belief-meta {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .regret-chart-wrap {
+    min-height: 260px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .belief-row {
+    transition: none;
+  }
+}
