@@ -238,7 +238,8 @@ function DoubleOraclePlayground() {
 
       <header className="playground-header">
         <PlaygroundNav current={5} />
-        <h1>Double Oracle in Colonel Blotto</h1>
+        <h1>Double Oracle</h1>
+        <h2 className="playground-subtitle">Colonel Blotto</h2>
       </header>
 
       <section className="oracle-controls">
@@ -299,4 +300,3 @@ function DoubleOraclePlayground() {
 }
 
 export default DoubleOraclePlayground;
-

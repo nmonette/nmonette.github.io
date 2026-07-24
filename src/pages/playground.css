@@ -77,6 +77,15 @@
   line-height: 0.96;
 }
 
+.playground-header .playground-subtitle {
+  margin: 9px 0 0;
+  color: #8b8b8b;
+  font-size: clamp(1rem, 1.45vw, 1.3rem);
+  font-weight: 430;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
 .playground-workspace {
   width: min(1480px, 100%);
   margin: 0 auto;

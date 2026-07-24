@@ -340,6 +340,7 @@ function Playground() {
       <header className="playground-header">
         <PlaygroundNav current={3} />
         <h1>Optimistic gradient descent</h1>
+        <h2 className="playground-subtitle">Min-max optimization</h2>
       </header>
 
       <section className="playground-workspace">

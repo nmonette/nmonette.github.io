@@ -290,6 +290,7 @@ function OtherPlayground() {
       <header className="playground-header">
         <PlaygroundNav current={1} />
         <h1>Other-play for zero-shot coordination</h1>
+        <h2 className="playground-subtitle">Lever game</h2>
       </header>
 
       <section className="other-shell">

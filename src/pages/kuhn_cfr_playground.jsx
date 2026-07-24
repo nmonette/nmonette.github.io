@@ -374,6 +374,7 @@ function KuhnCfrPlayground() {
       <header className="playground-header">
         <PlaygroundNav current={4} />
         <h1>Counterfactual regret minimization</h1>
+        <h2 className="playground-subtitle">Kuhn poker</h2>
       </header>
 
       <section className="kuhn-controls" aria-label="Simulation controls">

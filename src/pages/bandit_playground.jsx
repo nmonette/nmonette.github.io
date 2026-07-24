@@ -324,7 +324,8 @@ function BanditPlayground() {
 
       <header className="playground-header">
         <PlaygroundNav current={2} />
-        <h1>Thompson sampling for bandits</h1>
+        <h1>Thompson Sampling</h1>
+        <h2 className="playground-subtitle">Multi-armed bandit</h2>
       </header>
 
       <section className="bandit-shell">
