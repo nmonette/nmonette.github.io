@@ -3,7 +3,7 @@ import { Link } from "react-router";
 const playgrounds = [
   { number: 1, title: "Other-play for zero-shot coordination" },
   { number: 2, title: "Thompson Sampling" },
-  { number: 3, title: "Optimistic gradient descent" },
+  { number: 3, title: "Optimistic gradients" },
   { number: 4, title: "Counterfactual regret minimization" },
   { number: 5, title: "Double Oracle" },
 ];
