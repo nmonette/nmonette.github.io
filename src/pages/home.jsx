@@ -27,7 +27,7 @@ function Home() {
             <div className="right-column">
                 <h1>About</h1>
                 <h2>
-                I'm currently pursuing a Phd in computer science at the New York Universit.
+                I'm currently pursuing a PhD in computer science at New York University.
                 <div style={{ height: '0.5em' }} />
                 Previously I was a MSc student at the University of Oxford, and a BSc student in computer science at the University of California Irvine.
                 </h2>
