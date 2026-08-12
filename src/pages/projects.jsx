@@ -48,7 +48,7 @@ function Projects() {
                 links={[{url:"https://nmonette.github.io/optimising-ued/", title:"Project Site"}, {url: "https://arxiv.org/abs/2505.20659", title: "Paper"}, {url: "https://github.com/nmonette/NCC-UED", title: "GitHub"}]}
                 imgWidth="100%"
             />
-            <h1>Preprints & Projects</h1>
+            <h1>Preprints</h1>
             <ProjectBox 
                 img={dags}
                 title="Data-Augmented Game Starts for Accelerating Self-Play Exploration in Imperfect Information Games"

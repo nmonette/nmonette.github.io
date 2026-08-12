@@ -27,20 +27,21 @@ function Home() {
             <div className="right-column">
                 <h1>About</h1>
                 <h2>
-                I'm currently pursuing a MSc in advanced computer science at the University of Oxford.
+                I'm currently pursuing a Phd in computer science at the New York Universit.
                 <div style={{ height: '0.5em' }} />
-                Previously I completed my BSc in computer science at the University of California Irvine, where I graduated with honors in June 2025.
+                Previously I was a MSc student at the University of Oxford, and a BSc student in computer science at the University of California Irvine.
                 </h2>
 
                 <h1>Research</h1>
                 <h2>
-                    I am working on <b>curriculum</b> and <b>multi-agent</b> reinforcement learning with prof. <a rel="noreferrer" target="_blank" href="https://www.jakobfoerster.com/">Jakob Foerster</a>. 
+                    I am working on <b>multi-agent</b> reinforcement learning with prof. <a rel="noreferrer" target="_blank" href="https://www.eugenevinitsky.com/">Eugene Vinitsky</a>. 
                     <div style={{ height: '0.5em' }} />
+                    In my MSc I worked on <b>multi-agent</b>, <b>curriculum</b>, and <b>goal-conditioned</b> reinforcement learning with prof. <a rel="noreferrer" target="_blank" href="https://www.jakobfoerster.com/">Jakob Foerster</a>.
                     During my undergrad I worked on <b>multi-agent reinforcement learning</b> and <b>game theory</b> with profs. <a rel="noreferrer" target="_blank" href="https://royf.org/">Roy Fox</a> and <a rel="noreferrer" target="_blank" href="https://panageas.github.io/">Ioannis Panageas</a>.
                 </h2>
                 <h1>News</h1>
                 <h2>
-                    <div ><span style={{marginTop: "0.0001px", color: "#ef4444"}}>[4/2026] </span>Will be starting my PhD at NYU in Autumn 2026!</div>
+                    <div ><span style={{marginTop: "0.0001px", color: "#ef4444"}}>[8/2026] </span>Starting my PhD at NYU!</div>
                     <div style={{marginTop: "8px"}}><span style={{color: "#ef4444"}}>[11/2025] </span>New <a rel="noreferrer" target="_blank" href="https://arxiv.org/abs/2605.14379" >preprint!</a> on multi-agent RL.</div>
                     <div style={{marginTop: "8px"}}><span style={{color: "#ef4444"}}>[10/2025] </span>Gave a talk at the 2025 London Open Endedness Summit hosted by <a rel="noreferrer" target="_blank" href="https://www.imperial.ac.uk/adaptive-intelligent-robotics/" >AIRL</a> (slides <a rel="noreferrer" target="_blank" href="https://docs.google.com/presentation/d/1Pm9gHyRE1yei96dhMb8_nd0m868zMowXOm2CwCpifjY/edit?usp=sharing" >here</a>).</div>
                     <div style={{marginTop: "8px"}}><span style={{color: "#ef4444"}}>[9/2025] </span>Released some <a rel="noreferrer" target="_blank" href={ued_notes} >notes</a> on unsupervised environment design (UED).</div>
