@@ -29,7 +29,7 @@ function Home() {
                 <h2>
                 I'm currently pursuing a PhD in computer science at New York University.
                 <div style={{ height: '0.5em' }} />
-                Previously I was a MSc student at the University of Oxford, and a BSc student in computer science at the University of California Irvine.
+                Previously I was a MSc student at the University of Oxford, and a BSc student in at the University of California Irvine, both in computer science.
                 </h2>
 
                 <h1>Research</h1>
