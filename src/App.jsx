@@ -20,9 +20,8 @@ function App() {
             New York University
           </p>
           <p className="profile-bio">
-            I am a student of Eugene Vinitsky. My main research interest is
-            generalization in reinforcement learning. Right now, this is taking the form of
-            pretraining for generalist robotics policies.
+            I work on generalization in reinforcement learning with Eugene Vinitsy. Right now, I am interested in
+            pretraining for generalist robotics agents.
             <div style={{ height: '0.5em' }} />
             Previously, I was an intern and then MSc student of Jakob Foerster at the University of Oxford.
             During my time there I also worked on reinforcement learning, from the perspective of multi-agent systems and 
