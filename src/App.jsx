@@ -20,7 +20,7 @@ function App() {
             New York University
           </p>
           <p className="profile-bio">
-            I work on generalization in reinforcement learning with Eugene Vinitsy. Right now, I am interested in
+            I work on generalization in reinforcement learning with Eugene Vinitsky. Right now, I am interested in
             pretraining for generalist robotics agents.
             <div style={{ height: '0.5em' }} />
             Previously, I was an intern and then MSc student of Jakob Foerster at the University of Oxford.
