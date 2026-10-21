@@ -34,7 +34,7 @@ function App() {
             <span aria-hidden="true">|</span>
             <a href="https://linkedin.com/in/nathan-monette/">linkedin</a>
             <span aria-hidden="true">|</span>
-            <a href="https://scholar.google.com/citations?user=t_pLFtsAAAAJ&hl=en">scholar</a>
+            <a href="https://scholar.google.com/citations?user=2OunUUcAAAAJ&hl=en">scholar</a>
             <span aria-hidden="true">|</span>
             <a href="https://x.com/nathanrmonette">x</a>
           </nav>
