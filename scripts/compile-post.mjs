@@ -11,6 +11,26 @@ import { parsePost } from '../src/blog/post.js'
 // Preserve the comment boundary through citeproc, then remove it from the output.
 const citationCommentBoundary = '\uE000'
 
+function formattedCitationText() {
+  return (tree) => {
+    function visit(node) {
+      if (['code', 'pre', 'a', 'math'].includes(node.tagName)) return
+      if (!node.children) return
+      if (['em', 'strong', 'del'].includes(node.tagName)) {
+        // rehype-citation only processes text under a small set of tags,
+        // including span. Keep emphasis while making its citations reachable.
+        node.children = node.children.map((child) =>
+          child.type === 'text' && child.value.includes('@')
+            ? { type: 'element', tagName: 'span', properties: {}, children: [child] }
+            : child,
+        )
+      }
+      node.children.forEach(visit)
+    }
+    visit(tree)
+  }
+}
+
 function literalCitationComments() {
   return (tree) => {
     function visit(node) {
@@ -108,6 +128,7 @@ export async function compilePost(filename, markdown, bibliography) {
     .use(remarkGfm)
     .use(remarkMath)
     .use(remarkRehype)
+    .use(formattedCitationText)
     .use(literalCitationComments)
     .use(rehypeCitation, {
       bibliography: basename(bibliography),
