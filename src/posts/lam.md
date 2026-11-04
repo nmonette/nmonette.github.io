@@ -21,7 +21,7 @@ $$
 thus giving us the LAPO forward pass:
 $$
 \hat{a}_{t} = f_{IDM}(o_t, o_{t+1})  \\
-\hat{o}_{t+1} = f_{FDM}(o_t, \hat{a_t}) \\
+\hat{o}_{t+1} = f_{FDM}(o_t, \hat{a}_t) \\
 \min_{f} ||\hat{o}_{t+1} - o_{t+1} ||_2^2.
 $$
 
