@@ -1,7 +1,21 @@
+import { lazy, Suspense } from 'react'
 import face from './assets/face.jpeg'
 import './App.css'
+import PostList from './blog/PostList.jsx'
+
+const Blog = lazy(() => import('./Blog.jsx'))
 
 function App() {
+  const path = window.location.pathname.replace(/\/+$/, '')
+
+  if (path === '/blog' || path.startsWith('/blog/')) {
+    return (
+      <Suspense fallback={<main className="homepage">Loading…</main>}>
+        <Blog slug={path === '/blog' ? undefined : path.slice('/blog/'.length)} />
+      </Suspense>
+    )
+  }
+
   return (
     <main className="homepage">
       <header className="profile">
@@ -22,7 +36,7 @@ function App() {
           <p className="profile-bio">
             I work on generalization in reinforcement learning with Eugene Vinitsky. Right now, I am interested in
             pretraining for generalist robotics agents.
-            <div style={{ height: '0.5em' }} />
+            <span aria-hidden="true" style={{ display: 'block', height: '0.5em' }} />
             Previously, I was an intern and then MSc student of Jakob Foerster at the University of Oxford.
             During my time there I also worked on reinforcement learning, from the perspective of multi-agent systems and 
             autocurricula.
@@ -60,6 +74,10 @@ function App() {
             </em>
           </p>
         </article>
+      </section>
+      <section className="publications" aria-labelledby="blog-heading">
+        <h2 id="blog-heading">Blog</h2>
+        <PostList />
       </section>
     </main>
   )

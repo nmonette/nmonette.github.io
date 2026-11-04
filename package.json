@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "test": "node --test scripts/blog.test.mjs",
+    "build": "vite build && node scripts/build-blog-pages.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -15,17 +16,22 @@
     "@mui/icons-material": "^7.2.0",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
+    "hast-util-to-jsx-runtime": "^2.3.7",
     "katex": "^0.16.47",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-markdown": "^10.1.0",
     "react-router": "^7.7.0",
+    "rehype-citation": "^2.3.2",
     "rehype-katex": "^7.0.1",
     "rehype-raw": "^7.0.0",
     "remark-breaks": "^4.0.0",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
-    "three": "^0.185.1"
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "three": "^0.185.1",
+    "unified": "^11.0.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
