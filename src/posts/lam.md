@@ -1,5 +1,5 @@
 # What Do We Really Want from Latent Action Models?
-In light of recent results on otherwise quite challenging benchmarks for tabula rasa RL agents like Craftax [@creus_roger_2026_gpt6] and NetHack [@bergquist2026llmnethack], one clear way of seeing emergent performance in these tasks is to perform large scale multi-modal pretraining, as has been done with the modern Large Language Model [@radford_improving_2018]. However, in settings such as robotics, we simply just don't have access to an analogous internet-scale dataset **with action annotations**. 
+Large Language Models have recently demonsrated strong results on benchmarks like Craftax [@creus_roger_2026_gpt6] and NetHack [@bergquist2026llmnethack], which are quite difficult for tabula rasa RL agents. These results can likely be attributed to large-scale multi-modal pretraining [@radford_improving_2018], which brings a strong prior to these new tasks downstream. However, in settings such as robotics, we simply just don't have access to an analogous internet-scale dataset **with action annotations** for pretraining. 
 
 One solution to this problem is to use *latent actions* as our pretraining objective [@ye2025latent]. Latent actions are a learned representation that has the *idea* of an action behind it, perhaps analogous to the relationship between a LaCroix sparkling water and grapefruit. There have been a number of works proposing ways to imitate from action-less data, which generally can be called *Latent Action Models* or LAMs [@pmlr-v97-edwards19a; @schmidt2024learning; @pmlr-v267-nikulin25a].
 
@@ -45,7 +45,7 @@ Our latents predict the observations and not the action, so our results really h
 
 *Figure 2: Observation and action predictability on different OpenX datasets without action supervision, this time with a smaller information bottleneck.*
 
-In this case, we observe that things are just kind of bad, with low skill across the board. Action predictability has mildly improved, but is still far too close to $0.0$. I'm not necessarily trying to make a generalized claim about how well the information bottleneck extracts actions, however I don't think that technique is sufficient in this case. After a bit of desperation, I checked what would happen if we added auxiliary prediction from latent action to ground truth action (i.e. action supervision), as it is heavily suggested by LAOM [@pmlr-v267-nikulin25a]: 
+In this case, we observe that things are just kind of bad, with low skill across the board. Action predictability has mildly improved, but is still far too close to $0.0$. I'm not necessarily trying to make a generalized claim about how well the information bottleneck extracts actions, however I don't think that technique is sufficient in this case. After a bit of desperation, I checked what would happen if we added an auxiliary loss that minimizes reconsruction error from latent action to ground truth action (i.e. action supervision), as it is heavily suggested by LAOM [@pmlr-v267-nikulin25a]: 
 
 ![Skill comparison](/lam_openx_discrete_sup.png)
 
