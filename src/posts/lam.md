@@ -44,7 +44,7 @@ Our latents predict the observations and not the action, so our results really h
 
 *Figure 2: Observation and action predictability on different OpenX datasets without action supervision, this time with a smaller latent width.*
 
-In this case, we observe that instead of increasing action predictability, things are just kind of bad, with low skill across teh board. After a bit of desperation, I checked what would happen if we added auxiliary prediction from latent action to ground truth action (i.e. action supervision), as it is heavily suggested by LAOM [@pmlr-v267-nikulin25a]: 
+In this case, we observe that instead of increasing action predictability, things are just kind of bad, with low skill across the board. After a bit of desperation, I checked what would happen if we added auxiliary prediction from latent action to ground truth action (i.e. action supervision), as it is heavily suggested by LAOM [@pmlr-v267-nikulin25a]: 
 
 ![Skill comparison](/lam_openx_skill_sup.png)
 
