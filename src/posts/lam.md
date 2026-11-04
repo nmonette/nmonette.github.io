@@ -8,7 +8,7 @@ LAMs attack what appears to be a very challenging problem:
 
 ### What are Latent Action Models?
 
-In the sense of LAPO [@schmidt2024learning], the LAM is an autoencoder architecture, which jointly an inverse dynamics model (IDM) into a forward dynamics model (FDM). With $o$ meaning observation and $a$ meaning action, we get:
+In the sense of LAPO [@schmidt2024learning], the LAM is an autoencoder architecture, which jointly trains an inverse dynamics model (IDM) into a forward dynamics model (FDM). With $o$ meaning observation and $a$ meaning action, we get:
 $$
 f_{IDM}: \mathcal{O} \times \mathcal{O} \to \mathcal{A} \\
 (o_t, o_{t+1}) \mapsto a_t,
