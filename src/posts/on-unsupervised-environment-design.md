@@ -5,7 +5,7 @@ For starters, UED is a reinforcement learning (RL) *framework* for training a ge
 
 ![Different Minigrid maze levels](/blog-images/ued/grids.png)
 
-Figure 1: A screenshot of different Minigrid maze levels from the JaxUED library [@coward2024JaxUED].
+*Figure 1: A screenshot of different Minigrid maze levels from the JaxUED library [@coward2024JaxUED].*
 
 UED is framed as a *game*, where at each training iteration, there is an $\textcolor{red}{\text{adversary}}$ that plays a distribution over training levels, and the $\textcolor{ForestGreen}{\text{agent}}$ trains on levels sampled from that distribution. In the robustness sense, the adversary is supposed to propose levels that challenge the agent. The intention here (informally) is that at some point in this game where neither player can improve their strategies, the agent can generalise across the level set. However, for the sake of efficiency, we are also concerned with providing the agent with a *curriculum*, which transitions the agent gradually from easier levels to harder levels throughout training in order to guide its learning process. Thus, the adversarial training mechanism of UED in some sense is a form of an *autocurriculum*.
 
@@ -21,7 +21,7 @@ Moreover, we write the agent's neural policy as $\pi_x: \mathcal{O} \to \mathcal
 
 [![The general UED procedure](/blog-images/ued/general_ued.png)](/blog-images/ued/general_ued.pdf)
 
-Figure 2: A visualisation of the general UED procedure. The policy trains on sampled levels from the adversary, and then the policy and (sometimes) the adversary are updated.
+*Figure 2: A visualisation of the general UED procedure. The policy trains on sampled levels from the adversary, and then the policy and (sometimes) the adversary are updated.*
 
 In general, the UED training regime takes the following steps at each iteration (roughly in order):
 
