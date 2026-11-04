@@ -28,7 +28,7 @@ $$
 In the end, we really just care about passing the dataset through the IDM. In order to get to the point where that actually works, however, we need $\hat{a}_{t}$ to be heavily **compressed**. In the words of [@schmidt2024learning, p. 2]:
 > "By making the latent action an information bottleneck [...], we prevent the IDM from simply forwarding the entire future observation to the FDM, thereby forcing it to learn a highly compressed encoding of state transitions"
 
-With the downstream goal of being able to perform action-free pretraining, we particularly need a model which can compress the state transition **so much** that there is hardly any information left about the observation itself (or at least relative to the action). 
+With the downstream goal of being able to perform action-free pretraining, we particularly need a model which can compress the state transition **so much** that there is hardly any information left about the observation itself (or at least relative to the action). LAPO implements this compression by using a Vector-Quantized VAE [@NIPS2017_7a98af17] as their architecture, instead of a normal VAE.
 
 ### Testing LAPO for Pretraining
 The goal of pretraining is to provide a prior distribution over task behavior, so that we can finetune the model more efficiently to some set of tasks. If our latent actions are mostly compressed observations, we may find it impossible to actually measure if our pretraining has produced a helpful prior! Specifically, if we predict a latent action and then train an action "head" on top of this, the action head will simply be a behavior cloning policy. In order to even score our pretraining, we need the latent action to be a good predictor of the true action, but a bad predictor of the observations.
