@@ -14,7 +14,7 @@ function Blog({ slug }) {
       <title>{`${title} | Nathan Monette`}</title>
       <div className="profile-content">
         <nav className="profile-links" aria-label="Back home">
-          <a href="/">...back home</a>
+          <a className='back-home' href="/">← back</a>
         </nav>
         {post ? (
           <article>

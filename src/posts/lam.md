@@ -33,21 +33,21 @@ With the downstream goal of being able to perform action-free pretraining, we pa
 ### Testing LAPO for Pretraining
 The goal of pretraining is to provide a prior distribution over task behavior, so that we can finetune the model more efficiently to some set of tasks. If our latent actions are mostly compressed observations, we may find it impossible to actually measure if our pretraining has produced a helpful prior! Specifically, if we predict a latent action and then train an action "head" on top of this, the action head will simply be a behavior cloning policy. In order to even score our pretraining, we need the latent action to be a good predictor of the true action, but a bad predictor of the observations.
 
-To test this, I implemented a continuous variant of LAPO, and trained it on a balanced mixture of 7 robotic manipulation subsets of the Open X-Embodiment Dataset [@vuong2023open].  In order to compare predictability, we use a normalized MSE-type metric that we are calling "prediction skill." We define prediction skill with data mean $\mu$, which gives us $\text{skill} = 1 - \frac{MSE(\hat{a}_t, a_t)}{MSE(\mu, a_t)}$. However, note that instead of minimizing, we want the skill to be as close to $1.0$ as possible. We train 3 MLPs per dataset to take the latent action and predict $a_t$, $o_t$, or $o_{t+1}$, and compare how well they predict each quantity via prediction skill:
+To test this, I implemented LAPO, and trained it on a balanced mixture of 7 robotic manipulation subsets of the Open X-Embodiment Dataset [@vuong2023open].  In order to compare predictability, we use a normalized MSE-type metric that we are calling "prediction skill." We define prediction skill with data mean $\mu$, which gives us $\text{skill} = 1 - \frac{MSE(\hat{a}_t, a_t)}{MSE(\mu, a_t)}$. However, note that instead of minimizing, we want the skill to be as close to $1.0$ as possible. We train 3 MLPs per dataset to take the latent action and predict $a_t$, $o_t$, or $o_{t+1}$, and compare how well they predict each quantity via prediction skill:
 
-![Skill comparison](/lam_openx_skill_unsup.png)
+![Skill comparison](/lam_openx_discrete_unsup_large.png)
 
 *Figure 1: Observation and action predictability on different OpenX datasets without action supervision.*
 
-Our latents predict the observations and not the action, so our results really have the appearance that we did not squeeze our observations through a small enough information bottleneck. I think this may be what draws the most criticism about LAMs, because modifying the size of the information bottleneck in order to turn compressed observations into actions feels much more like magic than a science. So naturally, I tried reducing the latent dimension from $128$ to $32$:
+Our latents predict the observations and not the action, so our results really have the appearance that we did not squeeze our observations through a small enough information bottleneck. I think this may be what draws the most criticism about LAMs, because modifying the size of the information bottleneck in order to turn compressed observations into actions feels much more like magic than a science. So naturally, I tried reducing the size of the codebook so that the information bottleneck was even smaller:
 
-![Skill comparison](/lam_openx_skill_unsup_32.png)
+![Skill comparison](/lam_openx_discrete_unsup_small.png)
 
-*Figure 2: Observation and action predictability on different OpenX datasets without action supervision, this time with a smaller latent width.*
+*Figure 2: Observation and action predictability on different OpenX datasets without action supervision, this time with a smaller information bottleneck.*
 
-In this case, we observe that instead of increasing action predictability, things are just kind of bad, with low skill across the board. I'm not necessarily trying to make a generalized claim about how well the information bottleneck extracts actions, however I don't think that technique is sufficient in this case. After a bit of desperation, I checked what would happen if we added auxiliary prediction from latent action to ground truth action (i.e. action supervision), as it is heavily suggested by LAOM [@pmlr-v267-nikulin25a]: 
+In this case, we observe that things are just kind of bad, with low skill across the board. Action predictability has mildly improved, but is still far too close to $0.0$. I'm not necessarily trying to make a generalized claim about how well the information bottleneck extracts actions, however I don't think that technique is sufficient in this case. After a bit of desperation, I checked what would happen if we added auxiliary prediction from latent action to ground truth action (i.e. action supervision), as it is heavily suggested by LAOM [@pmlr-v267-nikulin25a]: 
 
-![Skill comparison](/lam_openx_skill_sup.png)
+![Skill comparison](/lam_openx_discrete_sup.png)
 
 *Figure 3: Observation and action predictability on different OpenX datasets with action supervision.*
 
@@ -55,7 +55,7 @@ Perhaps most interestingly, we can see that some subsets of Open X-Embodiment di
 
 There is a growing literature on augmentations and other tricks to improve the action-predictability of LAMs [@pmlr-v267-nikulin25a; @zhang2025what; @rudolph2026principled; @bu2026laofrobustlatentaction]. However, even under **ground-truth** action supervision, the LAM fails to produce action-predicting latents for some datasets! Accordingly I would like to stress that as a community we have some work to do in order to unlock larger scale pretraining for robotics.
 
-### Concluding Statements!
+### Concluding Statements
 
 LAMs are a really neat idea. Anecdotally I've observed a lot of skepticism towards them, and I think it's completely understandable given the problem setting has only really been made well-defined retroactively by @zhang2025what. Even more so, given the "well-defined" problem setting, it still sort of sounds insane!
 

@@ -241,3 +241,7 @@
     line-height: 1.5;
   }
 }
+
+.profile-links .back-home:hover {
+  color: #555;
+}
