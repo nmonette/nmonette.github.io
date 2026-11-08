@@ -21,9 +21,21 @@ async function writePage(directory, title) {
   await writeFile(join(directory, 'index.html'), withTitle(title))
 }
 
-// GitHub Pages serves these files directly, including on refresh or a shared link.
-await writePage(join(output, 'blog'), 'Blog')
+// Keep old index links working after moving the list onto the homepage.
+await mkdir(join(output, 'blog'), { recursive: true })
+await writeFile(join(output, 'blog', 'index.html'), `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0;url=/#blog" />
+    <link rel="canonical" href="/" />
+    <title>Blog | Nathan Monette</title>
+  </head>
+  <body><a href="/#blog">View blog posts on the homepage</a></body>
+</html>
+`)
 
+// GitHub Pages serves each post directly, including on refresh or a shared link.
 for (const file of files) {
   if (!file.isFile() || !file.name.endsWith('.md')) continue
   const markdown = await readFile(join(postsDirectory, file.name), 'utf8')

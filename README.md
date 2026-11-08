@@ -17,7 +17,9 @@ Add a Markdown file directly to `src/posts/`. No JSX, imports, or route changes 
 - Start with a plain-text `# Title`. It supplies the page heading and the link text. If omitted, the filename supplies the title.
 - Write the rest as ordinary Markdown. Headings, links, images, lists, blockquotes, code fences, tables, and footnotes are supported.
 - Every `.md` file in this folder is published. Keep unfinished drafts outside the folder.
-- Posts automatically appear on the homepage and at `/blog/`, sorted alphabetically by filename.
+- Posts automatically appear in the homepage's Blog section (`/#blog`), sorted alphabetically by filename. The final profile link jumps to this section, and each post's back link returns here.
+- Choose a thumbnail in the filename-keyed `thumbnails` map in `src/blog/posts.js`: set `src` to its URL and `alt` to a short description. For example, an image at `public/blog-images/my-figure.png` uses `src: '/blog-images/my-figure.png'`. Posts without an override use their first image.
+- Add keywords to the filename-keyed `keywords` map in `src/blog/posts.js` to show an italic keyword line beneath its title.
 
 For example, create `src/posts/my-new-post.md`:
 
@@ -81,6 +83,6 @@ npm run build
 npm run preview
 ```
 
-The build discovers all posts and creates `dist/blog/index.html` and an HTML entry point for each post, so direct links and refreshes work on GitHub Pages. Post content is rendered by React in the browser. A `404.html` lets unknown blog URLs show the missing-post page.
+The build discovers all posts and creates an HTML entry point for each post, so direct links and refreshes work on GitHub Pages. The former `/blog/` index redirects to `/#blog`. Post content is rendered by React in the browser. A `404.html` lets unknown blog URLs show the missing-post page.
 
 Add or edit posts, then commit and push as usual. The existing GitHub Actions workflow rebuilds and deploys on pushes to `main`; the live site updates after deployment completes. The development server picks up Markdown changes automatically.
