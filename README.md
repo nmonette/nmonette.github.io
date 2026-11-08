@@ -17,7 +17,7 @@ Add a Markdown file directly to `src/posts/`. No JSX, imports, or route changes 
 - Start with a plain-text `# Title`. It supplies the page heading and the link text. If omitted, the filename supplies the title.
 - Write the rest as ordinary Markdown. Headings, links, images, lists, blockquotes, code fences, tables, and footnotes are supported.
 - Every `.md` file in this folder is published. Keep unfinished drafts outside the folder.
-- Posts automatically appear in the homepage's Blog section (`/#blog`), sorted alphabetically by filename. The final profile link jumps to this section, and each post's back link returns here.
+- Posts automatically appear in the homepage's Blog section (`/#blog`), sorted alphabetically by filename. Each post's back link returns here.
 - Choose a thumbnail in the filename-keyed `thumbnails` map in `src/blog/posts.js`: set `src` to its URL and `alt` to a short description. For example, an image at `public/blog-images/my-figure.png` uses `src: '/blog-images/my-figure.png'`. Posts without an override use their first image.
 - Add keywords to the filename-keyed `keywords` map in `src/blog/posts.js` to show an italic keyword line beneath its title.
 

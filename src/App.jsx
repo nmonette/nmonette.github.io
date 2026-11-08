@@ -47,7 +47,7 @@ function App() {
             During my time there I also worked on reinforcement learning, from the perspective of multi-agent systems and 
             autocurricula.
           </p>
-          <nav className="profile-links" aria-label="Contact, profiles, and blog">
+          <nav className="profile-links" aria-label="Contact and profiles">
             <a href="mailto:nathanmonette1@gmail.com">email</a>
             <span aria-hidden="true">|</span>
             <a href="https://github.com/nmonette">github</a>
@@ -57,8 +57,6 @@ function App() {
             <a href="https://scholar.google.com/citations?user=2OunUUcAAAAJ&hl=en">scholar</a>
             <span aria-hidden="true">|</span>
             <a href="https://x.com/nathanrmonette">x</a>
-            <span aria-hidden="true">|</span>
-            <a href="#blog">blog</a>
           </nav>
         </div>
       </header>
